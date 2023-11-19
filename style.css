@@ -1,0 +1,25 @@
+.b {
+  width: 100px;
+  height: 100px;
+  background-color: tomato;
+  margin-top: 500px;
+}
+
+.b1 {
+  float: right;
+  margin-top: 0;
+  color: white;
+}
+
+.b2 {
+  color: white;
+}
+
+.b3 {
+  float: right;
+  color: white;
+}
+
+.b4 {
+  color: white;
+}

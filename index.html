@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- TUTORIAL BOOTSTRAP TOUR -->
+    <!-- 
+	0- http://bootstraptour.com/
+	1- crear package.json mediante npm init -y
+	2- instalar boostrap tour mediante npm i bootstrap-tour
+	3- instalar jquery mediante npm i jqery
+	4- en el head linkear bootstrap-tour-standalone.min.css
+	5- conectar mediante script src jquery.min.js
+	6- conectar mediante script src bootstrap-tour-standalone.min.js
+	7- añadir en el body mediante scr un "Instance the tour"
+	8- añadir en el body mediante scr un "Initialize the tour"
+	9 añadir en el body mediante scr un "Start the tour"
+ -->
+
+    <!-- import bootstrap tour -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap-tour/build/css/bootstrap-tour-standalone.min.css"
+    />
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap-tour/build/js/bootstrap-tour-standalone.min.js"></script>
+
+    <title>BTTour</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="b b1" id="b1">1</div>
+      <div class="b b2" id="b2">2</div>
+      <div class="b b3" id="b3">3</div>
+      <div class="b b4" id="b4">4</div>
+    </div>
+
+
+
+
+
+    <script>
+    
+	// confirm('Deseas comenzar el tour?');
+	
+	
+	// Instance the tour
+      var tour = new Tour({
+        steps: [
+          {
+            element: "#b2",
+            title: "Boton uno",
+            content: "Aca se pueden almacenar las distintas facturas",
+			smartPlacement: true,
+			// animation: false,
+		},
+		{
+			element: "#b1",
+            title: "Area de descargas",
+            content: "Puedes descargaar la factura que desees dandole al licono de descarga, esto alacenara un pdf en tu pc.",
+            smartPlacement: true,
+			// animation: false,
+		},
+		{
+			element: "#b3",
+            title: "NUEVO!!!",
+            content: "<strong>Area de usuario</strong>: en ella encontraras toda la informacion del contratante",
+            // placement: "left",
+			smartPlacement: true,
+			// animation: false,
+		},
+		{
+			element: "#b4",
+            title: "NUEVO!!!",
+            content: "Los 'tickets' ahora se usan desde la zona de 'ayuda' tambien podras ponerte en contacto con nosotros.",
+			smartPlacement: true,
+			// animation: false,
+		},
+        ],
+        storage: false,
+      });
+
+      // Initialize the tour
+      tour.init();
+
+      // Start the tour
+      tour.start();
+	  
+    </script>
+  </body>
+</html>
